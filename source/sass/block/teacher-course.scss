@@ -17,16 +17,20 @@
   padding: 10px 0 40px;
   
   @media(min-width: 768px) {
-    width: 70%;
+    width: 60%;
     margin: 0;
     padding: 0;
     background: none;
+  }
+  
+  @media(min-width: 1220px) {
+    width: 70%;
   }
 }
 
 .teacher-course__quote {
   @media(min-width: 768px) {
-    width: 30%;
+    width: 40%;
     margin: 0;
     padding-bottom: 20px;
     background-color: $white-basic;
@@ -41,6 +45,10 @@
       position: absolute;
       bottom: 0;
     }
+  }
+  
+  @media(min-width: 1220px) {
+    width: 30%;
   }
 }
 

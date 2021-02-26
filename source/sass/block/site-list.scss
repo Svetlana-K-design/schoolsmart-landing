@@ -6,6 +6,11 @@
   
   @media(min-width: 768px) {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 33px;
+  }
+  
+  @media(min-width: 1220px) {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: 33px;
   }
