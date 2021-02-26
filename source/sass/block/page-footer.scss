@@ -1,5 +1,10 @@
 .page-footer {
   min-height: 40px;  
+  border-top: 1px solid $border-input;
+  
+  @media(min-width: 768px) {
+    border: none;
+  }
 }
 
 .page-footer__wrapper {

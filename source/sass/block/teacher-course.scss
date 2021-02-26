@@ -1,6 +1,8 @@
 .teacher-course {
   width: 100%;
   text-align: center;
+  border-bottom: 1px solid $black-shadow;
+  padding-bottom: 10px;
   
   @media(min-width: 768px) {
     display: flex;
@@ -9,6 +11,7 @@
     margin: 0;
     padding: 0;
     background-color: $black-shadow;
+    border: none;
   }
 }
 

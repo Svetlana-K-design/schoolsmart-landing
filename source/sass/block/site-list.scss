@@ -18,7 +18,8 @@
 
 .site-list__item {
   cursor: pointer;
-  border-top: 1px dotted $border-input;
+  border-top: 1px solid $border-input;
+  border-bottom: 1px solid $black-shadow;
     
     @media(min-width: 768px){
       border: none;

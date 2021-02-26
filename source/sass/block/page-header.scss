@@ -16,8 +16,8 @@
 }
 
 .page-header__wrapper {
-  width: 300;
-  margin: 20px auto;
+  width: 300px;
+  margin: 20px auto 5px;
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
@@ -33,6 +33,7 @@
   @media(min-width: 768px) {
     align-items: center; 
     width: 95%;
+    margin: 20px auto;
   }
 }
 
