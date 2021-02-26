@@ -369,13 +369,22 @@ img {
       left: 0; } }
 
 .page-header__wrapper {
-  margin: 5px auto 20px;
+  width: 300px;
+  margin: 20px auto 5px;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px; }
+  padding: 0 10px; }
+  @media (min-width: 425px) {
+    .page-header__wrapper {
+      width: 405px; } }
+  @media (min-width: 600px) {
+    .page-header__wrapper {
+      width: 580px; } }
   @media (min-width: 768px) {
     .page-header__wrapper {
-      align-items: center; } }
+      align-items: center;
+      width: 95%;
+      margin: 20px auto; } }
 
 .page-header__icon {
   width: 60px;
@@ -401,7 +410,7 @@ img {
     opacity: 30%; }
 
 .page-header .main-nav--opened {
-  min-height: 200px; }
+  min-height: 220px; }
   @media (min-width: 768px) {
     .page-header .main-nav--opened {
       min-height: auto; } }
@@ -414,12 +423,17 @@ img {
   @media (min-width: 768px) {
     .site-list {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-rows: 33px; } }
+  @media (min-width: 1220px) {
+    .site-list {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-template-rows: 33px; } }
 
 .site-list__item {
   cursor: pointer;
-  border-top: 1px dotted #fcfae1; }
+  border-top: 1px solid #fcfae1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   @media (min-width: 768px) {
     .site-list__item {
       border: none; } }
@@ -459,7 +473,11 @@ img {
     opacity: 60%; }
 
 .page-footer {
-  min-height: 40px; }
+  min-height: 40px;
+  border-top: 1px solid #fcfae1; }
+  @media (min-width: 768px) {
+    .page-footer {
+      border: none; } }
 
 .page-footer__wrapper {
   text-align: center; }
@@ -482,6 +500,7 @@ img {
   position: relative; }
   @media (min-width: 768px) {
     .main-nav {
+      position: static;
       width: 70%;
       align-self: flex-end; } }
 
@@ -511,14 +530,29 @@ img {
     .main-nav--closed .main-nav__toggle::before {
       display: none; } }
 
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px; }
+  @media (min-width: 425px) {
+    .main-nav--opened .main-nav__wrapper {
+      width: 405px; } }
+  @media (min-width: 600px) {
+    .main-nav--opened .main-nav__wrapper {
+      width: 580px; } }
+  @media (min-width: 768px) {
+    .main-nav--opened .main-nav__wrapper {
+      width: 60%;
+      top: 55px;
+      left: 17%; } }
+  @media (min-width: 1220px) {
+    .main-nav--opened .main-nav__wrapper {
+      left: 20%; } }
+
 @media (max-width: 767px) {
   .main-nav--closed .site-list__item {
-    display: none; }
-  .main-nav--opened .main-nav__wrapper {
-    position: absolute;
-    top: 50px;
-    right: -20px;
-    width: 320px; } }
+    display: none; } }
 
 .main-nav--opened .main-nav__toggle {
   margin-left: 20px; }
@@ -545,7 +579,9 @@ img {
 
 .teacher-course {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 10px; }
   @media (min-width: 768px) {
     .teacher-course {
       display: flex;
@@ -553,21 +589,25 @@ img {
       align-items: center;
       margin: 0;
       padding: 0;
-      background-color: rgba(0, 0, 0, 0.05); } }
+      background-color: rgba(0, 0, 0, 0.05);
+      border: none; } }
 
 .teacher-course__info {
   background: rgba(0, 0, 0, 0.05);
   padding: 10px 0 40px; }
   @media (min-width: 768px) {
     .teacher-course__info {
-      width: 70%;
+      width: 60%;
       margin: 0;
       padding: 0;
       background: none; } }
+  @media (min-width: 1220px) {
+    .teacher-course__info {
+      width: 70%; } }
 
 @media (min-width: 768px) {
   .teacher-course__quote {
-    width: 30%;
+    width: 40%;
     margin: 0;
     padding-bottom: 20px;
     background-color: #ffffff;
@@ -580,6 +620,10 @@ img {
       background: linear-gradient(91.17deg, #eb5d56 0.01%, #390a40 100.01%);
       position: absolute;
       bottom: 0; } }
+
+@media (min-width: 1220px) {
+  .teacher-course__quote {
+    width: 30%; } }
 
 .teacher-course__title {
   font-size: 24px;
